@@ -21,15 +21,14 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 else (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
   pods_use_pkg_config_packages(apriltags libv4l2)
 endif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-
-pods_install_libraries(apriltags)
+ pods_install_libraries(apriltags)
 
 file(GLOB header_files "AprilTags/*.h")
-pods_install_headers(${header_files} DESTINATION AprilTags/)
+ pods_install_headers(${header_files} DESTINATION AprilTags/)
 
-pods_install_pkg_config_file(apriltags
-    LIBS -lapriltags
-    REQUIRES eigen3 opencv2
-    VERSION 1.0.0)
+ pods_install_pkg_config_file(apriltags
+     LIBS -lapriltags
+     REQUIRES eigen3 opencv2
+     VERSION 1.0.0)
 
 add_subdirectory(example)

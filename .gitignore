@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+build/CMakeFiles/3.16.3/CompilerIdC/
+
+build/
+
+build/.cmake/api/v1/query/client-vscode/
+
+build/.cmake/api/v1/reply/
+
+pod-build/
