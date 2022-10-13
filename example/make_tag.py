@@ -36,6 +36,7 @@ class AprilTagCodes:
 def generateAprilTag(canvas, position, metricSize, tagSpacing, tagID, tagFamililyData, rotation=2, symmCorners=True, borderBits=2, ccolor=color.rgb.black):
     #get the tag code
     try:
+        global tagCode
         tagCode=tagFamililyData.tagCodes[tagID]
     except:
         print("[ERROR]: Requested tag ID of {0} not available in the {1} TagFamiliy".format(tagID, tagFamililyData.chosenTagFamiliy))
